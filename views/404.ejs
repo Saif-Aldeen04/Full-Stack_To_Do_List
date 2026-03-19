@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- EJS template for the 404 page -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="not-found">
+        <h1>404</h1>
+        <h2>Page not found</h2>
+        <p style="text-align: center;">We couldn't find the page you were looking for.</p>
+        <a class="btn" href="/login" style="text-align: center;display: block;margin-top: 10px;color: #0091ff;">Go to Login</a>
+        <p style="margin-top: 18px; font-size: 0.9rem; color: #ccc;text-align: center;">Requested: <strong><%= path %></strong></p>
+    </div>
+
+</body>
+</html>

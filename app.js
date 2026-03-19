@@ -103,4 +103,9 @@ app.post("/remove-task", isAuthenticated, async (req, res) => {
     }
 });
 
+// Catch-all 404 handler (must come after all other routes)
+app.use((req, res) => {
+    res.status(404).render("404", { path: req.originalUrl });
+});
+
 app.listen(10000, () => console.log("Server running on http://localhost:10000/home"));
