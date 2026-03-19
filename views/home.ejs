@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- EJS template for the home page (ToDo List) -->
+<html lang="en">
+<head>
+    <!-- Meta data for website -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="img/icon.svg">
+
+    <!-- CSS, JavaScript and other files -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="/logic/main.js"></script>
+    <link rel="stylesheet" href="icomoon/style.css">
+</head>
+<body>
+
+    <!-- The Header of the website -->
+    <h1>To Do List</h1>
+    <h2 style="text-align: center; margin:0;">Welcome, <%= username %></h2>
+    <a href="/logout" style="position: absolute; top: 20px; right: 20px; color: #1dd1a1; text-decoration: none; font-size: 18px;">Logout</a>
+
+    <section id="list">
+        <% tasks.forEach((task, index) => { %>
+        <!-- Task Card -->
+        <div class="task" data-index="<%= index %>">
+            <span class="icon-star icon"></span>
+            <p class="task-text"><%= task %></p>
+            <div>
+                <span class="icon-trash icon"></span>
+                <span class="icon-angry2 icon"></span>
+                <span class="icon-heart icon dn"></span>
+            </div>
+        </div>
+        <% }); %>
+    </section>
+
+    <!-- Label for the input item -->
+    <h2>What is the next task?</h2>
+
+    <!-- The form where you enter the task that you want do -->
+    <form>
+        <input type="text" placeholder="Enter your task" id="taskName">
+        <button class="icon-cloud-upload" style="margin-bottom: 50px;"></button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* CSS styles for the ToDo List application */
+
+/* Global reset */
+* {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #eaeaea;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 50px 0;
+    color: #ffffff;
+}
+
+/* Task Card */
+.task {
+    margin: 25px auto;
+    width: 70vw;
+    padding: 18px 22px;
+    background-color: #2f3149;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.45);
+}
+
+/* Task Text */
+.task-text {
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+/* Icons */
+.icon {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icon-star,
+.icon-trash {
+    opacity: 0.6;
+    font-size: 26px;
+}
+
+.icon-star:hover {
+    color: #f7b731;
+    opacity: 1;
+}
+
+.icon-trash:hover {
+    color: #ff6b6b;
+    opacity: 1;
+}
+
+.icon-angry2 {
+    color: #feca57;
+    font-size: 24px;
+}
+
+.icon-heart {
+    font-size: 23px;
+    color: #ff7675;
+}
+
+.icon-heart:hover {
+    transform: scale(1.1);
+}
+
+/* Finished Task */
+.finish {
+    text-decoration: line-through;
+    color: #9fa4c4;
+}
+
+/* Star Active */
+.orange {
+    color: #f7b731;
+    opacity: 1;
+}
+
+/* Section Title */
+h2 {
+    text-align: center;
+    font-size: 34px;
+    margin: 90px 0 30px;
+    color: #dcdde1;
+}
+
+/* Form */
+form {
+    text-align: center;
+}
+
+input {
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 35vw;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #3a3d5c;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #b2b6d9;
+}
+
+/* Upload Button */
+button {
+    all: unset;
+}
+
+.icon-cloud-upload {
+    font-size: 38px;
+    margin-left: 15px;
+    position: relative;
+    top: 8px;
+    color: #1dd1a1;
+}
+
+.icon-cloud-upload:hover {
+    color: #10ac84;
+    transform: scale(1.1);
+}
+
+/* Utility */
+.dn {
+    display: none;
+}
